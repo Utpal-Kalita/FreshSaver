@@ -1,0 +1,74 @@
+[
+  {
+    "sku": "AMUL-MILK-1L",
+    "name": "Amul Taaza Toned Milk 1L",
+    "brand": "Amul",
+    "category": "Dairy",
+    "unitPrice": 72,
+    "unit": "carton",
+    "location": "Cold Storage - Rack B2",
+    "shelfLifeDays": 3,
+    "quantityAtRisk": 48,
+    "daysUntilExpiry": 2
+  },
+  {
+    "sku": "BRIT-BREAD-WHEAT",
+    "name": "Britannia 100% Whole Wheat Bread",
+    "brand": "Britannia",
+    "category": "Bakery",
+    "unitPrice": 42,
+    "unit": "loaf",
+    "location": "Bakery Aisle - Shelf A1",
+    "shelfLifeDays": 5,
+    "quantityAtRisk": 30,
+    "daysUntilExpiry": 1
+  },
+  {
+    "sku": "MTR-IDLI-1KG",
+    "name": "MTR Instant Idli Mix 1kg",
+    "brand": "MTR",
+    "category": "Ready Mix",
+    "unitPrice": 185,
+    "unit": "pack",
+    "location": "Dry Goods - Bay D3",
+    "shelfLifeDays": 180,
+    "quantityAtRisk": 20,
+    "daysUntilExpiry": 90
+  },
+  {
+    "sku": "AMUL-BUTTER-500G",
+    "name": "Amul Pasteurised Butter 500g",
+    "brand": "Amul",
+    "category": "Dairy",
+    "unitPrice": 265,
+    "unit": "pack",
+    "location": "Cold Storage - Rack A1",
+    "shelfLifeDays": 120,
+    "quantityAtRisk": 15,
+    "daysUntilExpiry": 45
+  },
+  {
+    "sku": "HALD-NAMKEEN-1KG",
+    "name": "Haldiram's Navratan Mix 1kg",
+    "brand": "Haldiram's",
+    "category": "Snacks",
+    "unitPrice": 215,
+    "unit": "pack",
+    "location": "Snacks Aisle - Shelf C4",
+    "shelfLifeDays": 240,
+    "quantityAtRisk": 40,
+    "daysUntilExpiry": 150
+  },
+  {
+    "sku": "MOTHER-GHEE-500ML",
+    "name": "Mother Dairy Pure Ghee 500ml",
+    "brand": "Mother Dairy",
+    "category": "Dairy",
+    "unitPrice": 420,
+    "unit": "jar",
+    "location": "Oil & Ghee - Section F2",
+    "shelfLifeDays": 365,
+    "quantityAtRisk": 10,
+    "daysUntilExpiry": 200
+  }
+]
