@@ -80,8 +80,8 @@ const formatCurrency = (value: number | string | null | undefined, symbol: strin
 
 const tooltipFormatter =
   (symbol: string, hasValue: boolean) =>
-  (value: number | string | null | undefined) =>
-    formatCurrency(hasValue ? value : null, symbol);
+  (value: unknown) =>
+    formatCurrency(hasValue ? (value as number | string | null | undefined) : null, symbol);
 
 export function WasteRiskAnalyzer(props: WasteRiskAnalyzerProps) {
   const { streamStatus, propStatus } = useTamboStreamStatus<WasteRiskAnalyzerProps>();
@@ -193,8 +193,8 @@ export function WasteRiskAnalyzer(props: WasteRiskAnalyzerProps) {
                 position="right"
                 fill="rgb(127,29,29)"
                 fontWeight={600}
-                formatter={(value) =>
-                  formatCurrency(hasLossEstimate ? value : null, resolvedCurrencySymbol)
+                formatter={(value: unknown) =>
+                  formatCurrency(hasLossEstimate ? (value as number | string | null | undefined) : null, resolvedCurrencySymbol)
                 }
               />
             </Bar>

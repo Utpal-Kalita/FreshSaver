@@ -135,7 +135,7 @@ export function FoodBankCard(props: FoodBankCardProps) {
       <div className="mt-6 space-y-4">
         {charities.map((charity, index) => {
           const key = `${charity.name}-${index}`;
-          const alreadyContacted = contacted[key];
+          const alreadyContacted = contacted?.[key];
           return (
             <div
               key={key}
