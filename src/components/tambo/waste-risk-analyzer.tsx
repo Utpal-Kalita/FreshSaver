@@ -63,7 +63,7 @@ const toFiniteNumber = (value: unknown): number | null => {
   return null;
 };
 
-const formatCurrency = (value: number | string | null | undefined, symbol: string) => {
+const formatCurrency = (value: unknown, symbol: string) => {
   const numericValue = toFiniteNumber(value);
   const prefix = symbol ?? "";
 
@@ -80,7 +80,7 @@ const formatCurrency = (value: number | string | null | undefined, symbol: strin
 
 const tooltipFormatter =
   (symbol: string, hasValue: boolean) =>
-  (value: number | string | null | undefined) =>
+  (value: number | string | ReadonlyArray<number | string> | undefined) =>
     formatCurrency(hasValue ? value : null, symbol);
 
 export function WasteRiskAnalyzer(props: WasteRiskAnalyzerProps) {
@@ -193,7 +193,7 @@ export function WasteRiskAnalyzer(props: WasteRiskAnalyzerProps) {
                 position="right"
                 fill="rgb(127,29,29)"
                 fontWeight={600}
-                formatter={(value) =>
+                formatter={(value: string | number | boolean | null | undefined) =>
                   formatCurrency(hasLossEstimate ? value : null, resolvedCurrencySymbol)
                 }
               />

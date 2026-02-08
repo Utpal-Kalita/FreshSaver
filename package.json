@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "init": "npx tambo init",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
