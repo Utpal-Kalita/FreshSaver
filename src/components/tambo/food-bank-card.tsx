@@ -135,7 +135,7 @@ export function FoodBankCard(props: FoodBankCardProps) {
       <div className="mt-6 space-y-4">
         {charities.map((charity, index) => {
           const key = `${charity.name}-${index}`;
-          const alreadyContacted = contacted[key];
+          const alreadyContacted = contacted?.[key];
           return (
             <div
               key={key}
@@ -188,7 +188,7 @@ export function FoodBankCard(props: FoodBankCardProps) {
                   <button
                     type="button"
                     onClick={() =>
-                      setContacted({ ...contacted, [key]: !alreadyContacted })
+                      setContacted({ ...(contacted ?? {}), [key]: !alreadyContacted })
                     }
                     className={`rounded-lg px-3 py-1.5 text-sm font-semibold shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 ${alreadyContacted ? "bg-blue-600 text-white" : "bg-blue-100 text-blue-700 hover:bg-blue-200"}`}
                   >
