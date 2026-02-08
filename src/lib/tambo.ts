@@ -32,7 +32,12 @@ import {
   findInventoryMatches,
   estimateLossForItem,
   getInventory,
+  getExpiringItems,
 } from "@/services/inventory";
+import {
+  ExpiryTimeline,
+  expiryTimelineSchema,
+} from "@/components/tambo/expiry-timeline";
 
 /**
  * tools
@@ -141,6 +146,26 @@ export const tools: TamboTool[] = [
         }),
       ),
   },
+  {
+    name: "getExpiringItems",
+    description:
+      "Get inventory items expiring within a given number of days. Returns items sorted by expiry date (soonest first). Use this when the user asks about items expiring this week, this month, or within any time range.",
+    tool: (args: { withinDays?: number }) =>
+      getExpiringItems(args.withinDays ?? 30),
+    toolSchema: z
+      .function()
+      .args(
+        z
+          .object({
+            withinDays: z
+              .number()
+              .positive()
+              .optional()
+              .describe("Number of days to look ahead. Defaults to 30."),
+          })
+          .default({}),
+      ),
+  },
 ];
 
 /**
@@ -185,6 +210,13 @@ export const components: TamboComponent[] = [
       "Donation fallback card listing nearby charities with contact details once stock is unsalvageable.",
     component: FoodBankCard,
     propsSchema: foodBankCardSchema,
+  },
+  {
+    name: "ExpiryTimeline",
+    description:
+      "Visual timeline showing items expiring soon as a horizontal bar chart, color-coded by urgency. Use this when the user asks about items expiring this month, this week, soon, or what's about to expire. Shows days until expiry, quantities, and potential loss values for each item.",
+    component: ExpiryTimeline,
+    propsSchema: expiryTimelineSchema,
   },
   // Add more components here
 ];

@@ -121,6 +121,18 @@ export const findInventoryMatches = async (
   return matches.sort((a, b) => b.matchConfidence - a.matchConfidence).slice(0, 5);
 };
 
+export const getExpiringItems = async (
+  withinDays: number = 30,
+): Promise<InventoryItem[]> => {
+  return inventory
+    .filter(
+      (item) =>
+        typeof item.daysUntilExpiry === "number" &&
+        item.daysUntilExpiry <= withinDays,
+    )
+    .sort((a, b) => (a.daysUntilExpiry ?? 0) - (b.daysUntilExpiry ?? 0));
+};
+
 export const estimateLossForItem = async (
   nameOrSku: string,
   quantity: number,
