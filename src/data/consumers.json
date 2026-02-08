@@ -1,0 +1,58 @@
+[
+  {
+    "id": "C001",
+    "name": "Priya Sharma",
+    "email": "priya.sharma@gmail.com",
+    "subscribed": true,
+    "preferredCategories": ["Dairy", "Bakery"]
+  },
+  {
+    "id": "C002",
+    "name": "Rahul Verma",
+    "email": "rahul.verma@outlook.com",
+    "subscribed": true,
+    "preferredCategories": ["Dairy", "Snacks"]
+  },
+  {
+    "id": "C003",
+    "name": "Anita Desai",
+    "email": "anita.desai@yahoo.com",
+    "subscribed": true,
+    "preferredCategories": ["Ready Mix", "Bakery", "Snacks"]
+  },
+  {
+    "id": "C004",
+    "name": "Vikram Patel",
+    "email": "vikram.patel@gmail.com",
+    "subscribed": false,
+    "preferredCategories": ["Dairy"]
+  },
+  {
+    "id": "C005",
+    "name": "Sneha Iyer",
+    "email": "sneha.iyer@gmail.com",
+    "subscribed": true,
+    "preferredCategories": ["Dairy", "Ready Mix", "Bakery"]
+  },
+  {
+    "id": "C006",
+    "name": "Arjun Nair",
+    "email": "arjun.nair@hotmail.com",
+    "subscribed": true,
+    "preferredCategories": ["Snacks", "Bakery"]
+  },
+  {
+    "id": "C007",
+    "name": "Megha Kapoor",
+    "email": "megha.kapoor@gmail.com",
+    "subscribed": true,
+    "preferredCategories": ["Dairy", "Snacks", "Ready Mix"]
+  },
+  {
+    "id": "C008",
+    "name": "Deepak Joshi",
+    "email": "deepak.joshi@gmail.com",
+    "subscribed": true,
+    "preferredCategories": ["Bakery", "Dairy"]
+  }
+]
