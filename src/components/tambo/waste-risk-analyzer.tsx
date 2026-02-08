@@ -80,7 +80,8 @@ const formatCurrency = (value: number | string | null | undefined, symbol: strin
 
 const tooltipFormatter =
   (symbol: string, hasValue: boolean) =>
-  (value: number | string | null | undefined) =>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (value: any) =>
     formatCurrency(hasValue ? value : null, symbol);
 
 export function WasteRiskAnalyzer(props: WasteRiskAnalyzerProps) {
@@ -193,7 +194,8 @@ export function WasteRiskAnalyzer(props: WasteRiskAnalyzerProps) {
                 position="right"
                 fill="rgb(127,29,29)"
                 fontWeight={600}
-                formatter={(value) =>
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                formatter={(value: any) =>
                   formatCurrency(hasLossEstimate ? value : null, resolvedCurrencySymbol)
                 }
               />
